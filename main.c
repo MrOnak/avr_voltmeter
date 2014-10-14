@@ -14,7 +14,7 @@
 #include "config.h"
  
 volatile uint8_t digit;
-static volatile uint16_t voltage;
+volatile uint16_t voltage;
 
 void init() {
 	digit	= 0;
