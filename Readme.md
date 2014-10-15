@@ -21,7 +21,7 @@ Ohm voltage divider is used. This results in 4.898V on the ADC pin.
 For fine-tuning I've put an additional 500 Ohm trimmer in front of the 3.8k
 resistor. 
 
-The voltage is read via ISR(ADC_vect). The interrupt routine is written in 
+The voltage is read via `ISR(ADC_vect)`. The interrupt routine is written in 
 such a way that it will read the voltage on ADC0 fifty times, then calculate
 the average of the accumulated readouts and provide the average of that
 as voltage variable. 
@@ -40,7 +40,7 @@ ATMega8.
 
 The displays are driven by multiplexing them through three 2n3904 NPN 
 transistors. The multiplexing is done by a counter0 overflow interrupt routine,
-nothing really spectacular there.
+(`ISR(TIMER0_OVF_vect)`) nothing really spectacular there.
 
 ## Configuration
 In `config.h` you can adjust the code to work with other maximum voltages. 
