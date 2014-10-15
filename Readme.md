@@ -39,8 +39,8 @@ common cathode displays you can very likely drive them directly from the
 ATMega8.
 
 The displays are driven by multiplexing them through three 2n3904 NPN 
-transistors. The multiplexing is done by a counter0 overflow interrupt routine,
-(`ISR(TIMER0_OVF_vect)`) nothing really spectacular there.
+transistors. The multiplexing is done by a counter0 overflow interrupt routine
+(`ISR(TIMER0_OVF_vect)`), nothing really spectacular there.
 
 ## Configuration
 In `config.h` you can adjust the code to work with other maximum voltages. 
